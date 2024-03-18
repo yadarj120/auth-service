@@ -48,9 +48,9 @@ public class AuthController {
         return ResponseEntity.ok(new LoginResponse(request.getEmail(), token));
     }
 
-    @GetMapping("/test")
-    public String test() {
-        return "Hello World";
+    @GetMapping("/validateToken")
+    public ResponseEntity<Boolean> validateToken() {
+        return ResponseEntity.ok(true);
     }
 }
 
