@@ -31,7 +31,8 @@ public class JwtHelper {
     }
 
     public static String extractUsername(String token) {
-        return getTokenBody(token).getSubject();
+        Claims c=getTokenBody(token);
+        return c.getSubject();
     }
 
     public static Boolean validateToken(String token, UserDetails userDetails) {
