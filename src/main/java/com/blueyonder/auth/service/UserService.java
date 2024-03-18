@@ -33,7 +33,7 @@ public class UserService {
         }
 
         String hashedPassword = passwordEncoder.encode(request.getPassword());
-        User user = new User(request.getName(), email, hashedPassword);
+        User user = new User(request.getName(), email, hashedPassword, false);
         repository.save(user);
     }
 
